@@ -1,7 +1,17 @@
-// map() lặp qua từng phtu trong mảng nhưng trả về mảng mới vs số lượng phtu bằng vs số lg phtu mảng cũ
+// map(): map nhận một callback là đối số , Callback sau đó được đưa ra giá trị hiện tại của phép lặp,
+// index của vòng lặp và mảng ban đầu mà từ đó map được gọi
+// Ngoài ra còn có 1 đối số thứ 2 tuỳ chọn cho map ( sau khi gọi lại ) đó là giá trị để sử dụng "this" bên trong callback
+
 // find() kiểm tra xem có phtu tmđk thì dừng luôn => trả về 1 đối tg
-// filter() giống find nhưng trả về tất cả phtu tmdk => trả về tất cả đối tg
-// reduce() thực thi 1 hàm lên các phtu trong mảng và trả về gtrị duy nhất => gtri trả về là gtri accumulator sau lần callback cuối cùng. gtrị khởi tạo initialvalue chính là gtri cho accumulator trong lần gọi đầu của callback và nếu k set gtri thì accumulator là phtu đầu tiên trong arr
+
+// filter(): filter nhận các đối số giống như map và hoạt động rất giống nhau.
+// Sự khác biệt duy nhất là callback cần trả về true hoặc false,
+// nếu nó là true mảng không thay đổi nếu là false phần tử đó sẽ được lọc ra khỏi mảng ban đầu .
+
+// reduce(): khá giống với map và filter nhưng hơi khác ở đối số callback.
+// Callback bây giờ nhận bộ tích luỹ ( nó tích luỹ tất cả các giá trị trả về.
+// Giá trị của nó là sự tích luỹ của các tích luỹ trả về trước đó ) giá trị hiện tại,
+// index hiện tại và cuối cùng là toàn bộ mảng .
 
 // map()
 const arrayMap = [1, 4, 9, 16];
